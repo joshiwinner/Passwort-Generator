@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button onclick="gen()"> gen pas</button>
+  <input type="text" placeholder="länge pas" id="länge">
+
+  <script>
+    let pass = ""
+    let alp =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",0,1,2,3,4,5,6,7,8,9]
+    function gen(params) {
+      pass = ""
+      for (let index = 0; index < document.getElementById("länge").value; index++) {
+        let random = Math.floor(Math.random() * alp.length)
+        pass += alp[random]
+      }
+      console.log(pass);
+    }
+  </script>
+
+  
+</body>
+</html>
